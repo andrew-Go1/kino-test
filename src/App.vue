@@ -50,7 +50,7 @@ export default defineComponent({
       searchQuery.value = query;
       currentPage.value = page;
       try {
-        const response = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=${query}&page=${page}`);
+        const response = await axios.get(`https://www.omdbapi.com/?apikey=8523cbb8&s=${query}&page=${page}`);
         movies.value = response.data.Search || [];
         totalResults.value = parseInt(response.data.totalResults) || 0;
       } catch (error) {
