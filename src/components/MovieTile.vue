@@ -1,6 +1,6 @@
 <template>
   <div class="movie-tile">
-    <img :src="posterUrl" :alt="movie.Title">
+    <img :src="posterUrl" :alt="movie.Title" width="100%">
     <h3>{{ movie.Title }}</h3>
     <p>Year: {{ movie.Year }}</p>
     <p>ID: {{ movie.imdbID }}</p>

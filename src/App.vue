@@ -3,8 +3,8 @@
     <Header @search="searchMovies" />
     <main>
       <div class="search-info" v-if="searchQuery">
-        <p>Search: {{ searchQuery }}</p>
-        <p>Results: {{ totalResults }}</p>
+        <p>You searched for: {{ searchQuery }},</p>
+        <p>{{ totalResults }} results found</p>
       </div>
       <Loader v-if="loading" />
       <NoResults v-else-if="!loading && movies.length === 0" />
@@ -80,16 +80,19 @@ export default defineComponent({
 <style>
 #app {
   font-family: Arial, sans-serif;
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 20px;
 }
 
 main {
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .search-info {
+  display: flex;
   margin-bottom: 20px;
+  p {
+    margin-right: 2pt;
+  }
 }
 </style>

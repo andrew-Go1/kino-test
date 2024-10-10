@@ -1,12 +1,12 @@
 <template>
   <header>
-    <h1>Movie Search</h1>
+    <h1>Movie Catalog</h1>
     <SearchBar @search="onSearch" />
     <UserInfo />
   </header>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue';
 import SearchBar from './SearchBar.vue';
 import UserInfo from './UserInfo.vue';
@@ -31,6 +31,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(28, 56, 56);
 }
 </style>
